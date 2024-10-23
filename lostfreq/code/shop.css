@@ -1,0 +1,247 @@
+/*{
+    padding:0;
+    margin: 0;
+    box-sizing:border-box;
+    font-family: 'Inconsolata', monospace;
+}
+
+.main-content {
+    margin-left: 240px;
+    padding: 20px;
+    width: calc(100% - 240px); 
+    overflow-y: auto;
+    position: relative;
+    z-index: 2;
+}
+
+.sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 200px;
+    background-color: #333;
+    color: #fff;
+    padding: 30px;
+    box-sizing: border-box;
+    z-index: -1;
+}
+
+.sidebar a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.links {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 20px;
+    padding-left: 36px;
+}
+
+.links a {
+    margin-bottom: 23px;
+    text-align: left;
+}
+
+.announcement-bar {
+    background-color: black;
+    color: #fff;
+    padding: 3px;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    overflow: hidden;
+}
+
+.announcement-text-container {
+    white-space: nowrap;
+    animation: moveText 10s linear infinite;
+}
+
+.announcement-text {
+    display: inline-block;
+}
+
+@keyframes moveText {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+.container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+}
+
+.backg-clip {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+/*.backg-clip{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: -2;
+}
+
+.clothing-item {
+    border: 1px solid #ddd;
+    padding-left: 1px;
+    text-align: center;
+}
+
+.clothing-item img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.main-content {
+    margin-left: 240px;
+    padding: 20px;
+    width: calc(100% - 240px);
+    overflow-y: auto;
+    position: relative;
+    z-index: 2;
+}*/
+/* Reset default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Global styles */
+  body {
+    font-family: 'Inconsolata', monospace;
+    margin: 0; /* Remove default body margin */
+  }
+  
+  .container {
+    position: relative;
+  }
+  
+  /* Background Video */
+  .backg-clip {
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1; /* Push the video behind other elements */
+  }
+  
+  /* Sidebar */
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 200px;
+    background-color: #565555; /* Set sidebar background color to #565555 */
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; /* Align items to the start of the container */
+    padding-top: 40px; /* Adjust top padding to lower the logo */
+    z-index: 1; /* Make sure sidebar is above the video */
+  }
+  
+  .sidebar a {
+    color: #fff;
+    text-decoration: none;
+    margin-bottom: 20px;
+    display: block; /* Ensure links are displayed as block elements */
+    width: 100%; /* Ensure links take full width of the sidebar */
+    text-align: center; /* Center align the text */
+  }
+  
+  .sidebar img {
+    margin-bottom: 20px;
+  }
+  
+  /* Header */
+  .announcement-bar {
+    background-color: #000; /* Change announcement bar background color to black */
+    padding: 10px 0;
+    text-align: center;
+    position: fixed;
+    top: 0; /* Position announcement bar at the top */
+    left: 0;
+    width: 100%; /* Make announcement bar full width */
+    z-index: 2; /* Ensure announcement bar is above sidebar */
+    overflow: hidden; /* Ensure text does not overflow */
+    white-space: nowrap; /* Prevent wrapping */
+  }
+  
+  .announcement-text {
+    color: #fff;
+    animation: moveText 10s linear infinite; /* Animation for moving text */
+  }
+  
+  @keyframes moveText {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(100%);
+    }
+  }
+  
+  /* Main content */
+  .main-content {
+    margin-left: 220px; /* Adjust according to sidebar width */
+    padding-top: 60px; /* Adjust top padding to account for announcement bar */
+    padding-left: 20px;
+    padding-right: 20px;
+    z-index: 1; /* Make sure content is above the video */
+  }
+  
+  h1 {
+    margin-bottom: 20px;
+  }
+  
+  .clothes-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+  
+  .clothing-item {
+    background-color: transparent; /* Remove white background */
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer; /* Change cursor to pointer for clickable items */
+  }
+  
+  .clothing-item img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .clothing-item h2 {
+    margin-top: 10px;
+    font-size: 18px;
+  }
+  
+  .clothing-item p {
+    font-size: 16px;
+    color: #666;
+  }
+  
+  .clothing-item a {
+    text-decoration: none; /* Remove underline */
+    color: inherit; /* Inherit color from parent */
+  }
+  

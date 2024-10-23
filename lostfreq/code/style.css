@@ -1,0 +1,94 @@
+*{
+    padding:0;
+    margin: 0;
+    box-sizing:border-box;
+    font-family: 'Inconsolata', monospace;
+}
+
+.container{
+    width:100%;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.content a{
+    color: gray;
+    font-size: 15px;
+    text-decoration: none;
+    display: block;
+    margin: 15px;
+    text-align: center;
+}
+
+.gram {
+    display: block;
+    margin-bottom: 10px;
+    margin: 0 auto;
+
+} 
+
+.opium {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -190%);
+  }
+
+#datetime {
+    font-size: 14px;
+    color: gray;
+    display: flex;
+    justify-content: space-between;
+}
+
+.backg-clip{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
+#playButton {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    cursor: pointer;
+    background: none;
+    border: none;
+  }
+  
+  #playImage, #pauseImage {
+    width: 30px;
+  }
+  
+  #playImage {
+    display: block;
+  }
+  
+  #pauseImage {
+    display: none;
+  }
+  #additionalImage {
+    margin-left: 10px;
+    width: 30px;
+  }
+
+  footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    z-index: -1;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+}
